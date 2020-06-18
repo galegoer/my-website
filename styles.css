@@ -1,0 +1,167 @@
+/*color scheme
+F7F9F9
+BED8D4
+78D5D7
+63D2FF
+2081C3
+*/
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter UI", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#F7F9F9 0%, #2081C3 100%);
+  overflow: hidden;
+  z-index: -1;
+  /* Make the rubber band scroll not show empty white space */
+  top: -10%;
+  height: 120%;
+  min-height: 120vh;
+  margin-bottom: -20%;
+}
+
+.box-container {
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-right: 50px;
+  margin-top: 50px;
+  background-image: linear-gradient(#BED8D4, #78D5D7);
+  border: 4px solid #2081C3;
+  overflow-y: auto;
+  display: inline-block;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #2081C3;
+  padding: 16px 32px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #78D5D7;
+  color: white;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.footer-buttons {
+  display: inline-block;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background: #18191f;
+  line-height: 55px;
+  border-radius: 15px;
+  box-shadow: -2px -2px 3px rgba(255,255,255,0.05),
+              3px 3px 3px rgba(0,0,0,0.2)
+}
+
+.options {
+  display: inline-block;
+}
+
+h1 {
+  display: block;
+  font-size: 80px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #2081C3;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 24px;
+  color: #2081C3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:hover .fa {
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
+}
+
+p {
+  margin: 20px;
+  padding: 10px;
+}
+
+.title-name {
+  position: relative;
+  background-color: #63D2FF;
+  font-weight: bold;
+  color: #2081C3;
+  letter-spacing: -4.5px;
+  text-transform: uppercase;
+  padding: 0 16px;
+  margin: 100px;
+  border-color: #2081C3;
+  border: 8px solid;
+  line-height: 1;
+}
+
+code {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+  padding: 16px 24px;
+  background: rgba(44, 37, 44, 0.8);
+  border: 1px solid #7f797f;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.header {
+  position: center;
+}
+
+.options {
+  margin: 20px;
+  display: inline-block;
+}
+
+span {
+  margin-right: 20px;
+}
+
+.footer {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
