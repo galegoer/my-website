@@ -13,19 +13,30 @@ body {
   font-family: "Inter UI", sans-serif;
   text-align: center;
   color: white;
+  overscroll-behavior: contain;
 }
 
 .background {
+  z-index: -1;
+  position: absolute;
   width: 100%;
-  height: 100%;
   background-image: linear-gradient(#F7F9F9 0%, #2081C3 100%);
   overflow: hidden;
-  z-index: -1;
   /* Make the rubber band scroll not show empty white space */
-  top: -10%;
+  top: -15%;
   height: 120%;
   min-height: 120vh;
   margin-bottom: -20%;
+}
+
+.title-name {
+  margin: 0;
+  overflow: hidden;
+  font-weight: bold;
+  color: #78D5D7;
+  letter-spacing: -4.5px;
+  text-transform: uppercase;
+  padding: 0 16px;
 }
 
 .box-container {
@@ -33,15 +44,17 @@ body {
   height: 250px;
   border-radius: 20px;
   padding: 20px;
-  margin-right: 50px;
   margin-top: 50px;
   background-image: linear-gradient(#BED8D4, #78D5D7);
   border: 4px solid #2081C3;
   overflow-y: auto;
   display: inline-block;
+  position: relative;
 }
 
 .button {
+  height: auto;
+  width: 100px;
   background-color: white;
   color: black;
   border: 2px solid #2081C3;
@@ -52,6 +65,12 @@ body {
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 70%;
+  left: 0;
+  right: 0;
 }
 
 .button:hover {
@@ -80,11 +99,12 @@ body {
 }
 
 h1 {
-  display: block;
-  font-size: 80px;
+  margin: 0;
+  font-size: 60px;
+  background: linear-gradient(gray, black);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
   h1 {
     font-size: 16vw;
   }
@@ -121,20 +141,6 @@ p {
   padding: 10px;
 }
 
-.title-name {
-  position: relative;
-  background-color: #63D2FF;
-  font-weight: bold;
-  color: #2081C3;
-  letter-spacing: -4.5px;
-  text-transform: uppercase;
-  padding: 0 16px;
-  margin: 100px;
-  border-color: #2081C3;
-  border: 8px solid;
-  line-height: 1;
-}
-
 code {
   display: block;
   box-sizing: border-box;
@@ -148,13 +154,9 @@ code {
   margin-bottom: 16px;
 }
 
-.header {
-  position: center;
-}
-
 .options {
   margin: 20px;
-  display: inline-block;
+  display: block;
 }
 
 span {
@@ -162,6 +164,5 @@ span {
 }
 
 .footer {
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-top: 100px;
 }
