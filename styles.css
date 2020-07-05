@@ -11,6 +11,10 @@
   --transition-speed: 400ms;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -18,16 +22,16 @@ body {
   font-family: "Inter UI", sans-serif;
   text-align: center;
   color: white;
-  height: 100vh;
+  height: 100%;
   /* overscroll-behavior: contain; */
 }
 
 .background {
   background-image: linear-gradient(#F7F9F9 0%, #2081C3 100%);
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-left: 5rem;
   padding: 1rem;
-  height: 100%;
+  min-height: 100%;
 }
 
 .navbar {
@@ -212,10 +216,9 @@ body::-webkit-scrollbar-thumb {
   padding: 16px 32px;
   border-radius: 20px;
   text-align: center;
-  text-decoration: none;
   transition-duration: 0.4s;
   cursor: pointer;
-  position: absolute;
+  /* position: absolute; */
   margin-left: auto;
   margin-right: auto;
   top: 70%;
@@ -242,6 +245,102 @@ body::-webkit-scrollbar-thumb {
   border-radius: 15px;
   box-shadow: -2px -2px 3px rgba(255,255,255,0.05),
               3px 3px 3px rgba(0,0,0,0.2)
+}
+
+table, tr, td {
+  /* margin-right: auto; */
+  border: 1px solid white;
+}
+
+tr {
+  height: 6em;
+}
+
+#tierlist {
+  margin-top: 1em;
+  background: black;
+}
+
+.tierrow {
+  width: 55em;
+  height: inherit;
+  text-align: left;
+}
+
+.tier {
+  width: 4em;
+  height: inherit;
+  font-size: 2em;
+}
+
+#addtier , #deletetier{
+  font-size: 4em;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+#changeTiers {
+  margin-bottom: 1.5em;
+}
+
+#tiertext {
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.5em;
+  word-break: break-all;
+}
+
+input {
+  padding: 0;
+  box-sizing: border-box;
+  width: inherit;
+  height: inherit;
+}
+
+.colorcell {
+ width: 3em;
+ height: inherit;
+}
+
+/* .tiercolor {
+  width: inherit;
+  height: inherit;
+  background: rgb(191, 255, 127) none repeat scroll 0% 0%;
+} */
+
+#trash {
+  opacity: 0;
+  color:red;
+  background: lightslategray;
+  border: 3px solid black;
+  border-top: none;
+  border-right: none;
+  position: fixed;
+  right:0;
+  top:0;
+  font-size: 4em;
+}
+
+#dropbox {
+  color: black;
+  background-color: #78D5D7;
+  width: 20rem;
+  height: 30rem;
+  border: 2px solid black;
+  border-right: none;
+  position: absolute;
+  right: 0;
+  overflow-y: auto;
+}
+
+.newPic {
+  width: 5em;
+  height: 5em;
+  display: inline-block;
 }
 
 h1 {
@@ -273,7 +372,6 @@ a {
 }
 
 .fa {
-  width: 2rem;
   min-width: 2rem;
   margin: 0 1.5rem;
 }

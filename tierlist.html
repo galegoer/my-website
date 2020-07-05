@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/peepog.jpg">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+    <title>Eric Galego</title>
+    <link href="styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eric's website">
+    <meta name="keywords" content="CSS, JavaScript, Personal, Netlify">
+    <meta name="author" content="Eric Galego">
+
+    <script src="main.js"></script>
+
+    <!-- <script src="Scripts/jquer_latest_2.11_.min.js" type="text/javascript"></script> -->
+    <!-- <script src="Scripts/html2canvas.js" type="text/javascript"></script> -->
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+          <li class="logo">
+            <a href="#" class="nav-link">
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+              <span class="link-text">Eric</span>
+              <i class="fa fa-thumbs-o-up hiddenthumb" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              <i class="fa fa-id-card" aria-hidden="true"></i>
+              <span class="link-text">About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="tierlist.html" class="nav-link">
+              <i class="fa fa-spinner" aria-hidden="true"></i>
+              <span class="link-text">TierList</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/galegoer" target="_blank" class="nav-link">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span class="link-text">Github</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://youtube.com/" target="_blank" class="nav-link">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              <span class="link-text">YouTube</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+              <span class="link-text">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+    <div class="background">
+        <div class="header">
+          <h1><span class="title-name"> Eric Galego</span></h1>
+          <h2>
+            Tier List Maker
+          </h2>
+
+          <h3>This is still popular right? Meant for non-mobile and you can save a picture of 
+            the table when you are done. (Saving images are under development).
+            Make sure you drag the actual image from the image location and not the google image result as it will not display.
+          </h3>
+
+          <button type="button" id="previewImg" class="button disabled" style="width: auto; font-size: 1em;">Preview Tier List</button>
+          <a id="saveImg" class="button disabled" href="#">Save Tier List</a>
+          <div id="previewImage"></div>
+        
+        </div>
+
+        <div id="trash"><i class="fa fa-trash" aria-hidden="true"></i></div>
+
+        <div id="dropbox">Drag and drop any image you would like to add to the tier list here... 
+          <br>
+        </div>
+
+        <table id="tierlist">
+            <tr>
+              <td class="colorcell">
+                <input id="tiercolor1" type="color" value="#ffec00">
+              </td>
+              <td class="tier" contenteditable="true" >
+                <span id="tiertext1">Tier</span>
+              </td>
+              <td class="tierrow" id="row1"></td>
+            </tr>
+            <tr>
+              <td class="colorcell">
+                <input id="tiercolor2" type="color"  value="#ff0000">
+              </td>
+              <td class="tier" contenteditable="true">
+                <span id="tiertext2">Tier</span>
+              </td>
+              <td class="tierrow" id="row2"></td>
+            </tr>
+            <tr>
+              <td class="colorcell">
+                <input id="tiercolor3" type="color" value="#00ff23">
+              </td>
+              <td class="tier" contenteditable="true">
+                <span id="tiertext3">Tier</span>
+              </td>
+              <td class="tierrow" id="row3"></td>
+            </tr>
+        </table>
+
+        <div id="changeTiers">
+          <button type="button" id="addtier">+</button>
+          <button type="button" id="deletetier">-</button>
+        </div>
+
+        <a href="index.html">Go Back Home</a>
+    </div>
+</body>
+</html>
