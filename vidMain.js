@@ -5,7 +5,21 @@ function provideVid(vidNum, counter, url, changeVideo) {
     fetch(url)
     .then(response => response.json())
     .then(function(data) {
-        console.log(data);
+        // console.log(data);
+        if('error' in data) {
+            errMsg = document.getElementById("errMsg");
+            if( errMsg == null) {
+                let randButton = document.getElementById('randomizeVid');
+                let errMsg = document.createElement('p');
+                errMsg.id = "errMsg";
+                errMsg.style.color = "red";
+                errMsg.innerHTML = "Error: " + data.error.message;
+                randButton.parentNode.insertBefore(errMsg, randButton.nextSibling);
+            } else {
+                errMsg.innerHTML = "Error: " + data.error.message;
+            }
+            throw new Error(data.error.message);
+        }
         if(vidNum == -1) {
             //not randomized yet
             vidNum = Math.floor(Math.random() * data.pageInfo.totalResults);
@@ -24,7 +38,7 @@ function provideVid(vidNum, counter, url, changeVideo) {
         return provideVid(vidNum, counter, url, changeVideo); 
     })
     .catch(e => {
-        console.log("Error: " + e);
+        console.log(e);
     })
 } 
 
